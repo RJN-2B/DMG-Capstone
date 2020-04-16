@@ -4,8 +4,8 @@
 
 <title>LSTM-RNN_Analysis</title>
 
-<script src="LSTM-RNN_Analysis1_files/require.js"></script>
-<script src="LSTM-RNN_Analysis1_files/jquery.js"></script>
+<script src="an_files/require.js"></script>
+<script src="an_files/jquery.js"></script>
 
 
 
@@ -13046,11 +13046,11 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="LSTM-RNN_Analysis1_files/custom.css">
+<link rel="stylesheet" href="an_files/custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="LSTM-RNN_Analysis1_files/latest.js"></script>
+    <script src="an_files/latest.js"></script><script type="text/javascript" async="" src="an_files/MathJax.js"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config;executed=true">
     MathJax.Hub.Config({
@@ -13069,7 +13069,7 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --><script type="text/javascript" async="" src="LSTM-RNN_Analysis1_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+    <!-- End of mathjax configuration --><script type="text/javascript" async="" src="an_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
 .MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
 .MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
 .MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
@@ -13164,26 +13164,15 @@ div#notebook {
 .MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
 .MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
 .MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
 </style></head>
-<body contenteditable="true"><div id="MathJax_Message" style="display: none;"></div>
+<body contenteditable="true"><div id="MathJax_Message" style="display: none;"></div><div id="MathJax_Message" style="display: none;"></div>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Capstone-Analysis">Capstone Analysis<a class="anchor-link" href="#Capstone-Analysis">¶</a></h1><h2 id="Chanho-Lim-and-Roland-Nguyen">Chanho Lim and Roland Nguyen<a class="anchor-link" href="#Chanho-Lim-and-Roland-Nguyen">¶</a></h2><h3 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">¶</a></h3><p>Deep
- Music Generation is a deep learning project with two sides. Firstly, to
- generate polyphonic music using deep learning models that replicate the
- style of composers such as Bach and Handel with variety.
-Secondly, to create metrics that evaluate the quality of generated 
-samples and the performance of the model.</p>
-<h3 id="----------------------------------------------------------------------------------------------------------------------------------------------------------------">----------------------------------------------------------------------------------------------------------------------------------------------------------------<a class="anchor-link" href="#----------------------------------------------------------------------------------------------------------------------------------------------------------------">¶</a></h3><p>Below is the training and analysis of our LSTM-RNN classifier on classical MIDI music.
-We've opted to use the following composers: Bach, Beethoven, Chopin, Handel, Haydn, Hays, Thomas, and Webster.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -13223,14 +13212,33 @@ We've opted to use the following composers: Bach, Beethoven, Chopin, Handel, Hay
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>notok
-C:\Users\livb1\Desktop\Yolane\2020Spring\Capstone\music-classification-deep-generation\lstm\midi
-C:\Users\livb1\Desktop\Yolane\2020Spring\Capstone\music-classification-deep-generation\lstm\midi
-Found 8 composers: Bach, Beethoven, Chopin, Handel, Haydn, Hays, Thomas, Webster
-Found 6432 training and 2145 test MIDI files!
-
-Loading MIDI files...
-Model Metrics:
+<pre>WARNING:tensorflow:From C:\Users\livb1\Anaconda3\lib\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:Large dropout rate: 0.555 (&gt;0.5). In TensorFlow 2.x, dropout() uses dropout rate instead of keep_prob. Please ensure that this is intended.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+lstm (LSTM)                  (None, 64, 665)           2167900   
+_________________________________________________________________
+dropout (Dropout)            (None, 64, 665)           0         
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 64, 444)           1971360   
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 64, 444)           0         
+_________________________________________________________________
+lstm_2 (LSTM)                (None, 222)               592296    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 222)               0         
+_________________________________________________________________
+dense (Dense)                (None, 8)                 1784      
+=================================================================
+Total params: 4,733,340
+Trainable params: 4,733,340
+Non-trainable params: 0
+_________________________________________________________________
+Saving model to disk<br><br>Model Metrics:
 Accuracy:  0.797752808988764
 Precision: [0.71608833 0.68918919 0.81790123 0.7300885  0.82857143 0.81654676
  0.92664093 0.87837838]
@@ -14383,8 +14391,7 @@ Saving model to disk
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avgfscores</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">avgfscores</span><span class="p">))</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">print("Epoch max fscore:", avgfscores</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">avgfscores</span><span class="p">))</span>)<br>print(lstm.check_all_test("testMids") <br></pre></div>
 
     </div>
 </div>
@@ -14402,9 +14409,19 @@ Saving model to disk
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>52</pre>
+<pre><span class="n">Epoch max fscore: </span>52<br>Test Accuracy : 0.803152</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div><br><div class="cell border-box-sizing code_cell rendered"><div class="output_wrapper"><div class="output"><div class="output_area"><div class="output_subarea output_stream output_stdout output_text"><pre><span class="p"></span>
+
+
+  </pre><pre>&nbsp;</pre>
+</div>
 </div>
 
 </div>
